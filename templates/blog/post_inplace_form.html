@@ -5,22 +5,15 @@
 
 {% block extrastyle %}{{ block.super }}
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{% static 'django_summernote/summernote.css' %}" rel="stylesheet">
-    <link href="{% static 'django_summernote/django_summernote.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
     <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.18.0/js/vendor/jquery.ui.widget.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.18.0/js/jquery.iframe-transport.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.18.0/js/jquery.fileupload.min.js"></script>
-
-    <script src="{% static 'django_summernote/summernote.min.js' %}"></script>
-    <script src="{% static 'django_summernote/ResizeSensor.js' %}"></script>
 
     <form action="" method="post">{% csrf_token %}
         {{ form.as_p }}
+        {{ form.media }}
         <input type="submit" value="Save"/>
     </form>
 {% endblock %}
