@@ -142,3 +142,4 @@ fabric.properties
 # Django-specific
 db.sqlite3
 media
+.idea/*
