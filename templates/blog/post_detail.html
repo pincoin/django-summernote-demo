@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.content|safe }}</p>
+
+    <a href="{% url 'blog:post-list' %}">List</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for post in posts %}
+            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+        {% empty %}
+            <li>No posts yet</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'blog:post-new-iframe' %}">Write(iframe)</a>
+    <a href="{% url 'blog:post-new-inplace' %}">Write(inplace)</a>
+{% endblock %}

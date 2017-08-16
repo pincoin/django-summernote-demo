@@ -1,0 +1,5 @@
+django==1.11.4
+django-crispy-forms==1.6.1
+django-dummy-plug==0.1.0
+django-summernote==0.8.7.3
+pytz==2017.2
