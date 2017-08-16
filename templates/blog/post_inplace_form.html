@@ -8,12 +8,14 @@
 {% endblock %}
 
 {% block content %}
+    <!-- TODO:  Uncaught ReferenceError: $ is not defined -->
     <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <form action="" method="post">{% csrf_token %}
         {{ form.as_p }}
-        {{ form.media }}
         <input type="submit" value="Save"/>
     </form>
+
+    {{ form.media }} <!-- CSS/JS for Summernote -->
 {% endblock %}
