@@ -8,14 +8,15 @@
 {% endblock %}
 
 {% block content %}
-    <!-- TODO:  Uncaught ReferenceError: $ is not defined -->
+    <!-- TODO:  jQuery is always at the top because SummerInplaceWidget references $ -->
     <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {{ form.media.css }}
 
     <form action="" method="post">{% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Save"/>
     </form>
 
-    {{ form.media }} <!-- CSS/JS for Summernote -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {{ form.media.js }} <!-- CSS/JS for Summernote -->
 {% endblock %}
