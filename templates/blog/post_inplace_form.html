@@ -8,11 +8,11 @@
 {% endblock %}
 
 {% block content %}
-    <!-- portability check: 1.12.4, 2.2.4, 3.2.1 -->
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     {{ form.media.css }}
 
-    <form action="" method="post">{% csrf_token %}
+    <form action="" method="post">
+        {% csrf_token %}
         {% crispy form %}
         <input type="submit" value="Save"/>
     </form>
