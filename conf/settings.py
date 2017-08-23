@@ -83,7 +83,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'ko-kr'
+LANGUAGE_CODE = 'ko_KR'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
@@ -101,10 +101,29 @@ LOCALE_PATHS = (
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
-STATIC_URL = '/static/'
+STATIC_URL = '/assets/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets/')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static/'),
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# django-summernote
+SUMMERNOTE_CONFIG = {
+    'lang': LANGUAGE_CODE,
+    'imageTitle': {
+        'specificAltField': True,
+    },
+    'popover': {
+        'image': [
+            ['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
+            ['float', ['floatLeft', 'floatRight', 'floatNone']],
+            ['remove', ['removeMedia']],
+            ['custom', ['imageTitle']],
+        ],
+    },
+}

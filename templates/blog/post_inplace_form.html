@@ -14,5 +14,10 @@
     {% crispy form %}
 
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    {{ form.media.js }} <!-- CSS/JS for Summernote -->
+
+    <!-- CSS/JS for Summernote -->
+    {{ form.media.js }}
+
+    <!-- additional plugins -->
+    <script src="{% static 'css/summernote-image-title.js' %}"></script>
 {% endblock %}
