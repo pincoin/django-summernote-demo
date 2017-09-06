@@ -114,7 +114,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 # django-summernote
 SUMMERNOTE_CONFIG = {
-    'lang': LANGUAGE_CODE,
+    'lang': 'ko-KR',
     'imageTitle': {
         'specificAltField': True,
     },
