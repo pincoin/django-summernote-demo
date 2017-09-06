@@ -126,4 +126,29 @@ SUMMERNOTE_CONFIG = {
             ['custom', ['imageTitle']],
         ],
     },
+    'codemirror': {
+        'lineNumbers': True,
+        'tabSize': 2,
+        'theme': 'monokai',
+    },
+    'css': (
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css',
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css',
+    ),
+    'js': (
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js',
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js',
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js',
+        os.path.join(STATIC_URL, 'js/summernote-image-title.js'),
+    ),
+    'css_for_inplace': (
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.css',
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.css',
+    ),
+    'js_for_inplace': (
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.js',
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/mode/xml/xml.js',
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/2.36.0/formatting.js',
+        os.path.join(STATIC_URL, 'js/summernote-image-title.js'),
+    ),
 }
